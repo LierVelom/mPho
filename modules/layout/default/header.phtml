@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="MobileOptimized" content="width">
+    <meta content="yes" name="apple-mobile-web-app-capable">
+    <meta name="Generator" content="mPho, https://mpho">
+    <?php if (! empty($set['keywords'])): ?>
+        <meta name="keywords" content="<?= $set['keywords'] ?>">
+    <?php endif ?>
+    <?php if (! empty($set['description'])): ?>
+        <meta name="description" content="<?= $set['description'] ?>">
+    <?php endif ?>
+    <meta name="theme-color" content="#fff">
+    <link rel="stylesheet" href="<?= $this->asset('scss','style.scss') ?>">
+    <link rel="shortcut icon" href="<?= $this->asset('images','favicon.ico') ?>">
+    <link rel="alternate" type="application/rss+xml" title="RSS News" href="<?= __URL__ ?>/rss/">
+    <title><?= (isset($set['title']) ? $set['title'] : 'mPho - Diễn đàn đam mỹ') ?></title>
+</head>
+<body>

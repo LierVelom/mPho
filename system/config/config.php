@@ -1,6 +1,6 @@
 <?php
 
-define('_URL_','http://localhost');
+define('__URL__','http://localhost');
 define('MODULE_DEFAULT','mainpage');
 define('PAGE_DEFAULT','index');
 
@@ -30,3 +30,6 @@ class Config {
 	}
 
 }
+
+require_once SYSTEM_PATH.'/config/database.php';
+$db = new Database();

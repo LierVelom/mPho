@@ -1,5 +1,6 @@
 <?php
 
+define('ASSETS_PATH', __DIR__.'/assets');
 define('MODULES_PATH', __DIR__.'/modules');
 define('SYSTEM_PATH', __DIR__.'/system');
 

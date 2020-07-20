@@ -24,6 +24,18 @@ class Modules {
 		}
 	}
 
-	public function assets($type,$file){}
+	public function asset($type,$file){
+
+		return __URL__ . '/assets/'.$type.'/'.$file;
+
+	}
+
+	public function layout($set,$data = array()){
+
+		$set = explode(':', $set);
+
+		include MODULES_PATH . '/layout/'.$set[0].'/'.$set[1].'.phtml'; 
+
+	}
 
 }

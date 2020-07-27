@@ -1,6 +1,6 @@
 <?php
 
-class Library_Loader{
+class Library_Loader {
 
 	public function load($library, $data = array()){
 		if(empty($this->{$library})){

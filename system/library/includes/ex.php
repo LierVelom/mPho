@@ -1,9 +1,11 @@
 <?php
 
-class ex {
+class Ex extends Modules {
 
-	public function ex1($data){
-		
+	public function __construct(){}
+
+	public function ex1(){
+		echo 'ex';
 	}
 
 }

@@ -1,23 +1,65 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
-    <meta name="HandheldFriendly" content="true">
-    <meta name="MobileOptimized" content="width">
-    <meta content="yes" name="apple-mobile-web-app-capable">
-    <meta name="Generator" content="mPho, https://mpho">
-    <?php if (! empty($set['keywords'])): ?>
-        <meta name="keywords" content="<?= $set['keywords'] ?>">
-    <?php endif ?>
-    <?php if (! empty($set['description'])): ?>
-        <meta name="description" content="<?= $set['description'] ?>">
-    <?php endif ?>
-    <meta name="theme-color" content="#fff">
-    <link rel="stylesheet" href="<?= $this->asset('scss','style.scss') ?>">
-    <link rel="shortcut icon" href="<?= $this->asset('images','favicon.ico') ?>">
-    <link rel="alternate" type="application/rss+xml" title="RSS News" href="<?= __URL__ ?>/rss/">
-    <title><?= (isset($set['title']) ? $set['title'] : 'mPho - Diễn đàn đam mỹ') ?></title>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+	<meta name="HandheldFriendly" content="true">
+	<meta name="MobileOptimized" content="width">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta name="Generator" content="mPho, https://mpho">
+	<?php if (! empty($data['keywords'])): ?>
+		<meta name="keywords" content="<?= $data['keywords'] ?>">
+	<?php endif ?>
+	<?php if (! empty($data['description'])): ?>
+		<meta name="description" content="<?= $data['description'] ?>">
+	<?php endif ?>
+	<meta name="theme-color" content="#fff">
+	<link rel="stylesheet" href="<?= $this->asset('scss','bootstrap.css').'?t='.time() ?>">
+	<link rel="stylesheet" href="<?= $this->asset('css','all.min.css') ?>">
+	<link rel="stylesheet" href="<?= $this->asset('css','import.css') ?>">
+	<link rel="stylesheet" href="<?= $this->asset('css','custom-bootstrap.css').'?t='.time() ?>">
+	<?php if(isset($data['css'])){ foreach($data['css'] as $o => $css){echo '<link rel="stylesheet" href="'.$this->asset('css','modules/'.$css.'.css').'">'."\n";} } ?>
+	<link rel="shortcut icon" href="<?= $this->asset('images','favicon.ico') ?>">
+	<link rel="alternate" type="application/rss+xml" title="RSS News" href="<?= __URL__ ?>/rss/">
+	<title><?= (isset($data['title']) ? $data['title'] : 'mPho - Diễn đàn đam mỹ') ?></title>
 </head>
 <body>
+	<?php if($this->is_logged_in): ?>
+		<section id="navbar">
+			<nav class="navbar navbar-light bg-lighter">
+				<a class="navbar-brand mr-0 mb-lg-3" href="#"><img src="<?= $this->asset('images','logo.png') ?>" width="35px"></a>
+				<ul class="navbar-nav bottom-nav mb-auto bg-lighter">
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-home"></i></a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-bell"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-comment-alt-lines"></i></a>
+						<span class="nav-badge badge badge-pill badge-danger">9</span>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-comments"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-envelope"></i></a>
+					</li>
+				</ul>
+				<ul class="navbar-nav ex-nav navbar-extend">
+					<li class="nav-item mr-auto mr-lg-0">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-search"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-user-circle"></i></a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#"><i class="nav-icon fa fa-cog"></i></a>
+					</li>
+				</ul>
+			</nav>
+		</section>
+	<?php endif ?>
+
+	

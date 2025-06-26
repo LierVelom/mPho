@@ -34,6 +34,6 @@ This approach keeps things minimal, readable, and flexible for small to medium p
 
 Clone this repository into `htdocs` folder (XAMPP)
 
-##📄 License
+## 📄 License
 This project is open-source and available under the MIT License.
 
